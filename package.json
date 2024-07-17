@@ -1,7 +1,8 @@
 {
   "name": "@emotta/js-cnpj-validate-letters-numbers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CNPJ validation considering letters and numbers",
+  "type": "module",
   "main": "src/cnpj.js",
   "files": [
     "LICENSE.txt",

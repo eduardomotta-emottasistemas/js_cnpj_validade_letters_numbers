@@ -30,7 +30,7 @@ SOFTWARE.
  * @returns {boolean} - Returns true for valid CNPJ or false for invalid.
  */
 
-const isValidCnpj = (value) => cnpjValidator(value);
+export const isValidCnpj = (value) => cnpjValidator(value);
 
 const cnpjValidator = (cnpj) => {
   const digitWeights = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
@@ -49,5 +49,3 @@ const cnpjValidator = (cnpj) => {
 
   return true;
 };
-
-exports.isValidCnpj = isValidCnpj;
