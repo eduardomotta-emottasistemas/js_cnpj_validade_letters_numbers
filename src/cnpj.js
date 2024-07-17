@@ -41,3 +41,5 @@ const cnpjValidator = (cnpj) => {
 
   return true;
 };
+
+exports.isValidCnpj = isValidCnpj;
