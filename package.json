@@ -1,12 +1,30 @@
 {
-  "name": "js_cnpj_validade_letters_numbers",
+  "name": "@emotta/js-cnpj-validate-letters-numbers",
   "version": "1.0.0",
-  "description": "isValidCnpj('03.170.763/0001-79') // result: true isValidCnpj('03170763000179') // result: true",
-  "main": "cnpj.js",
+  "description": "Validating CNPJ considering letters and numbers",
+  "main": "src/cnpj.js",
+  "files": [
+    "LICENSE.txt",
+    "src/cnpj.js"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publishLib": "npm publish --access public"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "cnpj",
+    "validation",
+    "brasil",
+    "brazil",
+    "cnpj with letters and numbers"
+  ],
+  "author": "Eduardo Motta - EMotta Sistemas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardomotta-emottasistemas/js_cnpj_validate_letters_numbers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eduardomotta-emottasistemas/js_cnpj_validate_letters_numbers/issues"
+  },
+  "homepage": "https://github.com/eduardomotta-emottasistemas/js_cnpj_validate_letters_numbers",  
+  "license": "MIT"
 }
