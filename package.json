@@ -1,0 +1,12 @@
+{
+  "name": "js_cnpj_validade_letters_numbers",
+  "version": "1.0.0",
+  "description": "isValidCnpj('03.170.763/0001-79') // result: true isValidCnpj('03170763000179') // result: true",
+  "main": "cnpj.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
