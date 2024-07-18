@@ -8,8 +8,22 @@ npm i @emotta/js-cnpj-validate-letters-numbers
 
 ### Usage
 ```js
-const { isValidCnpj } = require("@emotta/js-cnpj-validate-letters-numbers");
+import { isValidCnpj } from '@emotta/js-cnpj-validate-letters-numbers';
+```
+If an error happens in Import check package.json and add: "type": "module"
+example package.json:
+```json
+{
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "@emotta/js-cnpj-validate-letters-numbers": "^1.0.5"
+  }
+}
+```
 
+Usage Example:
+```js
 isValidCnpj('03.170.763/0001-79') // result: true
 isValidCnpj('03170763000179') // result: true
 
