@@ -22,14 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-
-/**
- * A function that add 1 value.
- *
- * @param {string} value - CNPJ number may also contain letters and mask.
- * @returns {boolean} - Returns true for valid CNPJ or false for invalid.
- */
-
 export const isValidCnpj = (value) => cnpjValidator(value);
 
 const cnpjValidator = (cnpj) => {
