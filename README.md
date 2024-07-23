@@ -17,7 +17,7 @@ example package.json:
   "main": "index.js",
   "type": "module",
   "dependencies": {
-    "@emotta/js-cnpj-validate-letters-numbers": "^1.0.5"
+    "@emotta/js-cnpj-validate-letters-numbers": "^1.0.6"
   }
 }
 ```
