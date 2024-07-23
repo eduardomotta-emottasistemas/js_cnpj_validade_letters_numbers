@@ -22,9 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-export const isValidCnpj = (value) => cnpjValidator(value);
-
-const cnpjValidator = (cnpj) => {
+export const isValidCnpj = (cnpj) => {
   const digitWeights = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
   const formattedCNPJ = String(cnpj).replace(/\W+/g, "");
   const calculateDigit = (cnpjBase, factors) => {
@@ -41,3 +39,35 @@ const cnpjValidator = (cnpj) => {
 
   return true;
 };
+
+export const cnpjGenerator = (cnpj) => {
+  let newCnpj = cnpj === undefined ? " ".repeat(8) + '000100' : String(cnpj)
+  const myRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+  for (let i = 0; i < 15; i++) {
+    newCnpj = newCnpj.replace(" ", String.fromCharCode(myRandom(48, 90)) );
+  }
+
+  newCnpj = newCnpj.replace(/\W+/g, "").padStart(14, '0').toUpperCase();
+
+  for (let i = 0; i < 100; i++) {
+    newCnpj = newCnpj.slice(0, 12) + String(i).padStart(2, '0');
+
+    if (isValidCnpj(newCnpj)) break
+}
+
+  return newCnpj;
+};
+
+export const cnpjFormat = (cnpj) => {
+  // Usando substring para extrair partes da string
+  const cnpjBase = String(cnpj).replace(/\W+/g, "")
+  const part1 = cnpjBase.substring(0, 2);
+  const part2 = cnpjBase.substring(2, 5);
+  const part3 = cnpjBase.substring(5, 7);
+  const part4 = cnpjBase.substring(7, 8);
+  const part5 = cnpjBase.substring(8, 12);
+  const part6 = cnpjBase.substring(12, 14);
+  
+  return `${part1}.${part2}.${part3}${part4}/${part5}-${part6}`;
+}
